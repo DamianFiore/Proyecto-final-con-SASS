@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin texto($aling,$justify){
+    align-self: $aling;
+    justify-self: $justify;
+}
+
+.seccion1{
+    background-image: url(./Imagenes/Imagen-seccion-1.jpg);
+    background-size:cover;
+    width: 100%;
+    height: 1000px;
+
+    .hdr{
+        display: grid;
+        grid-template-columns: 700px 400px 500px;
+        grid-template-rows: 200px 200px 350px 250px;
+        grid-template-areas: 
+                            "logo nav nav"
+                            "nombre nav nav"
+                            "granos frase frase"
+                            "frase2 frase frase";
+    }
+    .frase2{
+        font-size: 50px;
+        font-family: 'Dancing Script', cursive;
+        width: 500px;
+        color: khaki;
+        grid-area: frase2;
+        @include texto(flex-start, center);
+    }
+    .logo{
+        height: 200px;
+        width: 400px;
+        padding-left: 10px;
+        padding-top: 10px;
+        grid-area: logo;
+    }
+    .frase{
+        width: 850px;
+        height: 200px;
+        opacity: 0.3;
+        grid-area: frase;
+    }
+    .nombre{
+        font-size: 75px;
+        font-family: 'Stardos Stencil', cursive;
+        grid-area: nombre;
+        @include texto(flex-start, center);
+    }
+    .granos{
+        grid-area: granos;
+    }
+    /* NAV */
+    nav{
+        height: 75px;
+        width: 500px;
+        background-color: rgb(77, 1, 19);
+        border-radius: 10px;
+        padding-top: 16px;
+        grid-area: nav;
+        @include texto(none, end);
+    }
+}
+
+.main-g{
+    background-color: brown;
+    section#imagenes{
+        margin-left: 21px;
+        display: flex;
+        gap: 15px;
+    }
+    img{
+        opacity: 0.5;
+        border-style: solid;
+        border-color: black;
+        height: 200px;
+    }
+    img:hover{
+        opacity: 1;
+        border-color: white;
+        transform: scale(1.1,1.1);
+        transition: all 1s;
+    }
+    
+    div.col1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: auto;
+    }
+    div.col2{
+       @extend div.col1;
+    }
+    div.col3{
+        @extend div.col1;
+    }
+    div.col4{
+        @extend div.col1;
+    }
+    div.col5{
+        @extend div.col1;
+    }
+    div.col6{
+        @extend div.col1;
+    }
+}
+
+.hdr-contact{
+    display: grid;
+    grid-template-columns: 700px 900px;
+    grid-template-rows: 200px 100px;
+    grid-template-areas: 
+                        "logo nav"
+                        "nombre nav";
+    background-image: url(./Imagenes/Fondo/contacto.jpg);
+    background-size: cover;
+}
+
+.main-c{
+    background-image: url(./Imagenes/pexels-anna-tis-6744106.jpg);
+    background-size: cover;
+
+    form{
+        padding-left: 550px;
+        padding-right: 550px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: blanchedalmond;
+    }
+}
+
+
+/*Shop Online*/
+.seccion2{
+    background-color: #6b0f1a;
+    width: 100%;
+    height: 700px;
+    color: gray;
+    font-family: 'Ramaraja', serif;
+    display: grid;
+    grid-template-columns: 750px 400px 400px;
+    grid-template-rows: 300px 300px;
+    grid-template-areas: 
+    "sub1 sub2 sub3"
+    "sub1 sub4 sub5";
+
+    .subsection1{
+        font-family: 'Ramaraja', serif;
+        font-size: 50px;
+        grid-area: sub1;
+        @include texto(center, center);
+    }
+    .subsection1 li{
+        font-size: 20px;
+    }
+    .subsection2{
+        background-color: rgb(60, 60, 59);
+        border-radius: 20px;
+        width: 350px;
+        height: 250px;
+        padding: 20px;
+        font-size: 20px;
+        grid-area: sub2;
+        @include texto(center, center);
+    }
+    .subsection3{
+        grid-area: sub3;
+        @extend .subsection2;
+    }
+    .subsection4{
+        grid-area: sub4;
+        @extend .subsection2;
+    }
+    .subsection5{
+        grid-area: sub5;
+        @extend .subsection2;
+    }
+}
+
+/*Productos*/
+.productos{
+    background-color: #6b0f1a;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .carousel{
+        width: 400px;
+    }
+
+    .prod{
+        background-color: grey;
+        border-radius: 30px;
+        color: white;
+        display: grid;
+        padding-left: 39px;
+        grid-template-columns: 320px;
+        grid-template-rows: 400px 40px 50px 40px 50px;
+        grid-template-areas: 
+                            "img"
+                            "name"
+                            "des"
+                            "price"
+                            "button";
+        img{
+            grid-area: img;
+            @include texto(center, center);
+            height: 380px;
+        }
+        name{
+            grid-area: name;
+            @include texto(center, center);
+        }
+        des{
+            grid-area: des;
+            @include texto(center, center);
+            padding-left: 20px;
+        }
+        price{
+            grid-area: price;
+            @include texto(center, center);
+        }
+    }
+}
+
+/*Footer*/
+footer{
+    background-color: rgb(34, 33, 33);
+    color: grey;
+    font-family: 'Ramaraja', serif;
+    height: 200px;
+    font-size: 25px;
+    img{
+        height: 45px;
+    }
+}
+
+
+
+
+

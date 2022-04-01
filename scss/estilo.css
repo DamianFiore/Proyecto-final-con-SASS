@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.seccion1 {
+  background-image: url(./Imagenes/Imagen-seccion-1.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 1000px;
+  /* NAV */
+}
+
+.seccion1 .hdr {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 700px 400px 500px;
+      grid-template-columns: 700px 400px 500px;
+  -ms-grid-rows: 200px 200px 350px 250px;
+      grid-template-rows: 200px 200px 350px 250px;
+      grid-template-areas: "logo nav nav" "nombre nav nav" "granos frase frase" "frase2 frase frase";
+}
+
+.seccion1 .frase2 {
+  font-size: 50px;
+  font-family: 'Dancing Script', cursive;
+  width: 500px;
+  color: khaki;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: frase2;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.seccion1 .logo {
+  height: 200px;
+  width: 400px;
+  padding-left: 10px;
+  padding-top: 10px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+}
+
+.seccion1 .frase {
+  width: 850px;
+  height: 200px;
+  opacity: 0.3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: frase;
+}
+
+.seccion1 .nombre {
+  font-size: 75px;
+  font-family: 'Stardos Stencil', cursive;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: nombre;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+      justify-self: center;
+}
+
+.seccion1 .granos {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: granos;
+}
+
+.seccion1 nav {
+  height: 75px;
+  width: 500px;
+  background-color: #4d0113;
+  border-radius: 10px;
+  padding-top: 16px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: nav;
+  -ms-flex-item-align: none;
+      align-self: none;
+      justify-self: end;
+}
+
+.main-g {
+  background-color: brown;
+}
+
+.main-g section#imagenes {
+  margin-left: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.main-g img {
+  opacity: 0.5;
+  border-style: solid;
+  border-color: black;
+  height: 200px;
+}
+
+.main-g img:hover {
+  opacity: 1;
+  border-color: white;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.main-g div.col1, .main-g div.col2, .main-g div.col3, .main-g div.col4, .main-g div.col5, .main-g div.col6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: auto;
+}
+
+.hdr-contact {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 700px 900px;
+      grid-template-columns: 700px 900px;
+  -ms-grid-rows: 200px 100px;
+      grid-template-rows: 200px 100px;
+      grid-template-areas: "logo nav" "nombre nav";
+  background-image: url(./Imagenes/Fondo/contacto.jpg);
+  background-size: cover;
+}
+
+.main-c {
+  background-image: url(./Imagenes/pexels-anna-tis-6744106.jpg);
+  background-size: cover;
+}
+
+.main-c form {
+  padding-left: 550px;
+  padding-right: 550px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: blanchedalmond;
+}
+
+/*Shop Online*/
+.seccion2 {
+  background-color: #6b0f1a;
+  width: 100%;
+  height: 700px;
+  color: gray;
+  font-family: 'Ramaraja', serif;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 750px 400px 400px;
+      grid-template-columns: 750px 400px 400px;
+  -ms-grid-rows: 300px 300px;
+      grid-template-rows: 300px 300px;
+      grid-template-areas: "sub1 sub2 sub3" "sub1 sub4 sub5";
+}
+
+.seccion2 .subsection1 {
+  font-family: 'Ramaraja', serif;
+  font-size: 50px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: sub1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.seccion2 .subsection1 li {
+  font-size: 20px;
+}
+
+.seccion2 .subsection2, .seccion2 .subsection3, .seccion2 .subsection4, .seccion2 .subsection5 {
+  background-color: #3c3c3b;
+  border-radius: 20px;
+  width: 350px;
+  height: 250px;
+  padding: 20px;
+  font-size: 20px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: sub2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.seccion2 .subsection3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: sub3;
+}
+
+.seccion2 .subsection4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: sub4;
+}
+
+.seccion2 .subsection5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: sub5;
+}
+
+/*Productos*/
+.productos {
+  background-color: #6b0f1a;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.productos .carousel {
+  width: 400px;
+}
+
+.productos .prod {
+  background-color: grey;
+  border-radius: 30px;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  padding-left: 39px;
+  -ms-grid-columns: 320px;
+      grid-template-columns: 320px;
+  -ms-grid-rows: 400px 40px 50px 40px 50px;
+      grid-template-rows: 400px 40px 50px 40px 50px;
+      grid-template-areas: "img" "name" "des" "price" "button";
+}
+
+.productos .prod img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: img;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  height: 380px;
+}
+
+.productos .prod name {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: name;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.productos .prod des {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: des;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding-left: 20px;
+}
+
+.productos .prod price {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: price;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+/*Footer*/
+footer {
+  background-color: #222121;
+  color: grey;
+  font-family: 'Ramaraja', serif;
+  height: 200px;
+  font-size: 25px;
+}
+
+footer img {
+  height: 45px;
+}
+/*# sourceMappingURL=estilo.css.map */
